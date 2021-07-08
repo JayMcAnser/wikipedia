@@ -3,12 +3,21 @@
   "version": "1.0.0",
   "description": "Wikipedia mediakunst connector",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clear": "killall node",
+    "dev": "node index.js",
+    "test": "node --expose-internals ./node_modules/.bin/mocha $(find test -name '*spec.js') --exit --recursive"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Jay McAnser",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "wikibase-sdk": "^7.13.0",
+    "wtf_wikipedia": "^9.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.0.2"
+  }
 }
