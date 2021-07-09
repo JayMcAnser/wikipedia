@@ -1,0 +1,3 @@
+[submodule "wtf_wikipedia"]
+	path = wtf_wikipedia
+	url = git@github.com:JayMcAnser/wtf_wikipedia.git

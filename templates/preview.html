@@ -14,11 +14,19 @@
       <h2>{{this.title}}</h2>
     {{/if}}
     {{#each this.paragraphs}}
-    <p>
-      {{#each this}}
-        {{textlayout this}}
+      <p>
+        {{#each this.sentences}}
+          {{textlayout this}}
+        {{/each}}
+      </p>
+
+      {{#each this.lists}}
+        <ul>
+          {{#each this.items}}
+            <li>{{textlayout this}}</li>
+          {{/each}}
+        </ul>
       {{/each}}
-    </p>
     {{/each}}
   </div>
   {{/each}}
