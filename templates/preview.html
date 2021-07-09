@@ -1,0 +1,26 @@
+<html>
+  <meta charset="UTF-8">
+  <title>preview: {{artistName}}</title>
+  <link rel="stylesheet" href="style.css">
+<body>
+  <div>
+    <div><a href="index.html">back</a></div>
+    <div><a href="{{wikiUrl}}" target="_blank">wiki page</a></div>
+  </div>
+  <h1>{{artistName}}</h1>
+  {{#each bio}}
+  <div>
+    {{#if this.title}}
+      <h2>{{this.title}}</h2>
+    {{/if}}
+    {{#each this.paragraphs}}
+    <p>
+      {{#each this}}
+        {{textlayout this}}
+      {{/each}}
+    </p>
+    {{/each}}
+  </div>
+  {{/each}}
+</body>
+</html>

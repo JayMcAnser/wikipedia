@@ -12,8 +12,9 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
+    "handlebars": "^4.7.7",
     "wikibase-sdk": "^7.13.0",
-    "wtf_wikipedia": "^9.0.0"
+    "wtf_wikipedia": "github:JayMcAnser/wtf_wikipedia"
   },
   "devDependencies": {
     "chai": "^4.3.4",
