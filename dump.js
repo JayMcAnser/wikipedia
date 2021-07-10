@@ -8,6 +8,7 @@ const MergeEngine = require('./lib/merge-engine');
 console.log('dumping test files');
 
 let QId = [
+  {name: 'Trevor Batten', key: 'Q52840351'},
   {name: 'Marina Abramovic', key: 'Q47496'},
   {name: 'Ulay', key: 'Q69562'},
   {name: 'General Idea', key: 'Q283498'},
@@ -15,7 +16,7 @@ let QId = [
   {name: 'Corinna Smid', key: 'Q35828924'},
   {name: 'Yvonne Oerlemans'},
   {name: 'Marinus Boezem', key: 'Q477388'},
-  {name: 'Trevor Batten', key: 'Q52840351'},
+
   {name: 'Constant Dullaart', key: 'Q19665830'},
   {name: 'Nan Hoover', key: 'Q1964408'},
   {name: 'Melanie Bonajo', key: 'Q24049112'}
@@ -41,7 +42,7 @@ let runDump = async function runDump() {
 
   }
 
-  indexPage = `<html><body style="font-family: 'Arial"><h1>Test biography</h1><p>version 1.0, dd 2021-07-08</p><ul>${indexPage}</ul></p></body></html>`
+  indexPage = `<html><meta charset="UTF-8"><link rel="stylesheet" href="style.css"><body><h1>Test biography</h1><ul>${indexPage}</ul></p></body></html>`
   Fs.writeFileSync(Path.join(rootDir, `index.html`), indexPage);
   console.log('done')
 }

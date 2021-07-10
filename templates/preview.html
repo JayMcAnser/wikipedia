@@ -8,30 +8,36 @@
     <div class="right"><a href="{{wikiUrl}}" target="_blank">wiki page</a></div>
   </div>
   <h1>{{artistName}}</h1>
-  {{#each bio}}
-  <div>
-    {{#if this.title}}
-      <h2>{{this.title}}</h2>
-    {{/if}}
-    {{#each this.paragraphs}}
-      <p>
-        {{#each this.sentences}}
-          {{textlayout this}}
-        {{/each}}
-      </p>
 
-      {{#each this.lists}}
-        <ul>
-          {{#each this.items}}
-            <li>{{textlayout this}}</li>
+  {{#if error}}
+    <div class="error">{{error}}</div>
+  {{else}}
+
+    {{#each bio}}
+    <div>
+      {{#if this.title}}
+        <h2>{{this.title}}</h2>
+      {{/if}}
+      {{#each this.paragraphs}}
+        <p>
+          {{#each this.sentences}}
+            {{textlayout this}}
           {{/each}}
-        </ul>
+        </p>
+
+        {{#each this.lists}}
+          <ul>
+            {{#each this.items}}
+              <li>{{textlayout this}}</li>
+            {{/each}}
+          </ul>
+        {{/each}}
       {{/each}}
-    {{/each}}
-  </div>
+    </div>
   {{/each}}
+  {{/if}}
   <div class="toolbar">
-    <div class="right">version: {{version}}</div>
+    <div class="left">wiki - preview</div><div class="right">version: {{version}}</div>
   </div>
 </body>
 </html>
