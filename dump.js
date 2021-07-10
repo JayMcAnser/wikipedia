@@ -8,6 +8,7 @@ const MergeEngine = require('./lib/merge-engine');
 console.log('dumping test files');
 
 let QId = [
+  {name: 'Marina Abramovic', key: 'Q47496'},
   {name: 'Trevor Batten', key: 'Q52840351'},
   {name: 'Marina Abramovic', key: 'Q47496'},
   {name: 'Ulay', key: 'Q69562'},
