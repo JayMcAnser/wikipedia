@@ -30,7 +30,7 @@ describe('wiki-connect', function () {
     assert.equal(result.bio[1].title, 'Early career');
     assert.equal(result.bio[1].paragraphs.length, 1);
     // text may differ if changed in the wikipedia
-    assert.equal(result.bio[1].paragraphs[0][0].text, 'In the early 1970s, struggling with his sense of "Germanness," Ulay moved to Amsterdam, where he began experimenting with the medium of Polaroid.')
+    assert.equal(result.bio[1].paragraphs[0].sentences[0].text, 'In the early 1970s, struggling with his sense of "Germanness," Ulay moved to Amsterdam, where he began experimenting with the medium of Polaroid.')
   })
 
   // it('artist - list', async() => {

@@ -1,6 +1,6 @@
 {
   "name": "wikipedia",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Wikipedia mediakunst connector",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,6 @@
   "dependencies": {
     "axios": "^0.21.1",
     "handlebars": "^4.7.7",
-    "wikibase-sdk": "^7.13.0",
     "wtf_wikipedia": "^9.0.0"
   },
   "devDependencies": {
