@@ -1,5 +1,12 @@
 ## Wikipedia connector Mediakunst.net
 
+2021-08-11
+version 1.1.x
+- add: block list can be set in the default.json. Scan title for full title
+- add: space in title do not count as difference
+- add: capitals do not count as changes
+
+
 2021-07-10
 version 1.0.1
 - add documentation

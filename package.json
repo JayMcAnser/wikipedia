@@ -1,6 +1,6 @@
 {
   "name": "wikipedia",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Wikipedia mediakunst connector",
   "main": "index.js",
   "scripts": {
@@ -12,12 +12,13 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
+    "config": "^3.3.6",
     "handlebars": "^4.7.7",
-    "wtf_wikipedia": "^9.0.0"
+    "wtf_wikipedia": "^8.5.1"
   },
   "devDependencies": {
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
-    "mocha": "^9.0.2"
+    "mocha": "^9.0.3"
   }
 }

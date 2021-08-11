@@ -3,11 +3,12 @@ const WikiConnect = require('./lib/wiki-connect')
 const Fs = require('fs');
 const Path = require('path');
 const MergeEngine = require('./lib/merge-engine');
+const Config = require('config');
 
 
-console.log('dumping test files');
 
 let QId = [
+  {name: 'Constant Dullaart', key: 'Q19665830'},
   {name: 'Marina Abramovic', key: 'Q47496'},
   {name: 'Trevor Batten', key: 'Q52840351'},
   {name: 'Marina Abramovic', key: 'Q47496'},
@@ -18,18 +19,22 @@ let QId = [
   {name: 'Yvonne Oerlemans'},
   {name: 'Marinus Boezem', key: 'Q477388'},
 
-  {name: 'Constant Dullaart', key: 'Q19665830'},
+
   {name: 'Nan Hoover', key: 'Q1964408'},
   {name: 'Melanie Bonajo', key: 'Q24049112'}
 
 ]
 
 let runDump = async function runDump() {
-  let wikiConnect = new WikiConnect.Wiki();
+  let blockList = Config.has('blockList') ? Config.get('blockList') : [];
+  let wikiConnect = new WikiConnect.Wiki({blockList});
   let mergeEngine = new MergeEngine();
   mergeEngine.templateFile = Path.join(__dirname, 'templates', 'preview.html')
   let indexPage = '';
   let rootDir = Path.join(__dirname, 'data');
+
+  console.log(`dumping test files to ${rootDir}`);
+
   for (let index = 0; index < QId.length; index++) {
     if (QId[index].key) {
       indexPage += `<li><a href="${QId[index].key}.html">"${QId[index].name} <small>(id: ${QId[index].key})</small></a></li>`
