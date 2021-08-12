@@ -19,10 +19,17 @@ let QId = [
   {name: 'Corinna Smid', key: 'Q35828924'},
   {name: 'Yvonne Oerlemans'},
   {name: 'Marinus Boezem', key: 'Q477388'},
-
-
-  {name: 'Melanie Bonajo', key: 'Q24049112'}
-
+  {name: 'Melanie Bonajo', key: 'Q24049112'},
+  {name: 'Julika Rudelius', key: 'Q19663781'},
+  {name: 'stanley brouwn', key: 'Q874901'},
+  {name: 'Anouk De Clercq', key: 'Q19587492'},
+  {name: 'Ant Farm', key: 'Q278375'},
+  {name: 'Esther Polak', key: 'Q19587594'},
+  {name: 'Francis Alys', key: 'Q19663781'},
+  {name: 'belit sağ', key: 'Q50345560'},
+  {name: 'Hank Bull', key: 'Q24262352'},
+  {name: 'Livinus_van_de_Bundt', key: 'Q2162448'},
+  {name: 'Livinus and Jeep van de Bundt', key: 'Q62392767'},
 ]
 
 let runDump = async function runDump() {
