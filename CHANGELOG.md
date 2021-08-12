@@ -1,5 +1,10 @@
 ## Wikipedia connector Mediakunst.net
 
+2021-08-12
+version 1.2.x
+- add: images are download to the server and name {Q id}.{extension}
+- chg: logging can be configured by Wiki({logger: [logger object]})
+
 2021-08-11
 version 1.1.x
 - add: block list can be set in the default.json. Scan title for full title

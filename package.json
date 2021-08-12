@@ -1,6 +1,6 @@
 {
   "name": "wikipedia",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Wikipedia mediakunst connector",
   "main": "index.js",
   "scripts": {
@@ -15,8 +15,7 @@
     "config": "^3.3.6",
     "handlebars": "^4.7.7",
     "jshashes": "^1.0.8",
-    "wtf_wikipedia": "^8.5.1",
-    "wtf-plugin-image": "^0.3.0"
+    "wtf_wikipedia": "^8.5.1"
   },
   "devDependencies": {
     "chai": "^4.3.4",
