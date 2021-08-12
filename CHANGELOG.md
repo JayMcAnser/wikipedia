@@ -7,6 +7,7 @@ version 1.1.x
 - add: capitals do not count as changes
 - add: scans for quote and marks them in the paragraph
 - add: retrieve images from the wiki page. First is defined as bio image
+- add: images with (ë  are now loaded correct
 
 2021-07-10
 version 1.0.1

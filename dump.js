@@ -9,11 +9,10 @@ const Config = require('config');
 
 let QId = [
 
-  {name: 'Constant Dullaart', key: 'Q19665830'},
   {name: 'Nan Hoover', key: 'Q1964408'},
+  {name: 'Constant Dullaart', key: 'Q19665830'},
   {name: 'Marina Abramovic', key: 'Q47496'},
   {name: 'Trevor Batten', key: 'Q52840351'},
-  {name: 'Marina Abramovic', key: 'Q47496'},
   {name: 'Ulay', key: 'Q69562'},
   {name: 'General Idea', key: 'Q283498'},
   {name: 'Abramovic/Ulay', key: 'Q29939705'},
