@@ -13,16 +13,27 @@
     <div class="error">{{error}}</div>
   {{else}}
 
+  {{#if this.images}}
+    <img class="img-bio" src="{{this.images.[0]}}" />
+  {{/if}}
+
     {{#each bio}}
     <div>
       {{#if this.title}}
         <h2>{{this.title}}</h2>
       {{/if}}
+
       {{#each this.paragraphs}}
         <p>
+          {{#if this.isQuote}}
+         <blockquote>
+          {{/if}}
           {{#each this.sentences}}
             {{textlayout this}}
           {{/each}}
+        {{#if this.isQuote}}
+        </blockquote>
+        {{/if}}
         </p>
 
         {{#each this.lists}}

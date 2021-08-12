@@ -14,7 +14,9 @@
     "axios": "^0.21.1",
     "config": "^3.3.6",
     "handlebars": "^4.7.7",
-    "wtf_wikipedia": "^8.5.1"
+    "jshashes": "^1.0.8",
+    "wtf_wikipedia": "^8.5.1",
+    "wtf-plugin-image": "^0.3.0"
   },
   "devDependencies": {
     "chai": "^4.3.4",

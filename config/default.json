@@ -1,5 +1,13 @@
 {
   "blockList": [
     "Exhibitions (selection)"
-  ]
+  ],
+  "image": {
+    "size": "800px",
+    "server": "https://upload.wikimedia.org/wikipedia/commons/"
+  },
+  "url": {
+    "idToInfo": "w/api.php?action=wbgetentities&languages=en&format=json&props=sitelinks/urls&ids=",
+    "idToImage": "w/api.php?action=wbgetentities&languages=en&format=json&ids="
+  }
 }

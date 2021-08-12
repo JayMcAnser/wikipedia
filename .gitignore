@@ -108,3 +108,5 @@ dist
 .tern-port
 
 data
+
+config/local.json

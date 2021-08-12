@@ -8,7 +8,9 @@ const Config = require('config');
 
 
 let QId = [
+
   {name: 'Constant Dullaart', key: 'Q19665830'},
+  {name: 'Nan Hoover', key: 'Q1964408'},
   {name: 'Marina Abramovic', key: 'Q47496'},
   {name: 'Trevor Batten', key: 'Q52840351'},
   {name: 'Marina Abramovic', key: 'Q47496'},
@@ -20,7 +22,6 @@ let QId = [
   {name: 'Marinus Boezem', key: 'Q477388'},
 
 
-  {name: 'Nan Hoover', key: 'Q1964408'},
   {name: 'Melanie Bonajo', key: 'Q24049112'}
 
 ]
@@ -45,7 +46,7 @@ let runDump = async function runDump() {
     } else {
       indexPage += `<li>${QId[index].name} (no biography)</li>`
     }
-
+    process.stdout.write('.')
   }
 
   indexPage = `<html><meta charset="UTF-8"><link rel="stylesheet" href="style.css"><body><h1>Test biography</h1><ul>${indexPage}</ul></p></body></html>`

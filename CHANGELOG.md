@@ -5,7 +5,8 @@ version 1.1.x
 - add: block list can be set in the default.json. Scan title for full title
 - add: space in title do not count as difference
 - add: capitals do not count as changes
-
+- add: scans for quote and marks them in the paragraph
+- add: retrieve images from the wiki page. First is defined as bio image
 
 2021-07-10
 version 1.0.1
