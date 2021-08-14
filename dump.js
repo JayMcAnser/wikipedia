@@ -9,6 +9,7 @@ const Config = require('config');
 
 let QId = [
 
+  {name: 'stanley brouwn', key: 'Q874901'},
   {name: 'Nan Hoover', key: 'Q1964408'},
   {name: 'Constant Dullaart', key: 'Q19665830'},
   {name: 'Marina Abramovic', key: 'Q47496'},
@@ -21,14 +22,15 @@ let QId = [
   {name: 'Marinus Boezem', key: 'Q477388'},
   {name: 'Melanie Bonajo', key: 'Q24049112'},
   {name: 'Julika Rudelius', key: 'Q19663781'},
-  {name: 'stanley brouwn', key: 'Q874901'},
+
   {name: 'Anouk De Clercq', key: 'Q19587492'},
-  {name: 'Ant Farm', key: 'Q278375'},
+  {name: 'Ant Farm', key: 'Q317874'},
   {name: 'Esther Polak', key: 'Q19587594'},
-  {name: 'Francis Alys', key: 'Q19663781'},
+  {name: 'Julika Rudelius', key: 'Q19663781'},
   {name: 'belit sağ', key: 'Q50345560'},
+  {name: 'Francis Alys', key: 'Q558288'},
   {name: 'Hank Bull', key: 'Q24262352'},
-  {name: 'Livinus_van_de_Bundt', key: 'Q2162448'},
+  {name: 'Livinus van de Bundt', key: 'Q2162448'},
   {name: 'Livinus and Jeep van de Bundt', key: 'Q62392767'},
 ]
 
