@@ -1,5 +1,8 @@
 ## Wikipedia connector Mediakunst.net
 
+2021-08-26
+- fix: image is not returned
+
 2021-08-12
 version 1.2.x
 - add: images are download to the server and name {Q id}.{extension}
