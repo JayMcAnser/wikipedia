@@ -1,5 +1,8 @@
 ## Wikipedia connector Mediakunst.net
 
+2021-09-26
+- listing number per alinea
+
 2021-08-26
 - fix: image is not returned
 

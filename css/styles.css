@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p {
+    @apply pb-4;
+  }
+  h1 {
+    @apply font-bold;
+  }
+  .div-line {
+    @apply divide-solid divide-solid divide-y-2 divide-gray-900 pb-4
+  }
+  .line {
+    border-top: black 2px solid;
+    @apply pt-4 mt-4;
+  }
+  .bio-segment {
+    @apply line flex flex-col space-y-4;
+  }
+  .bio-paragraph {
+    @apply flex flex-row
+  }
+  .bio-info-extra {
+    @apply flex-none w-72 hidden md:block
+  }
+
+}

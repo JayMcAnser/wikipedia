@@ -1,12 +1,13 @@
 {
   "name": "wikipedia",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Wikipedia mediakunst connector",
   "main": "index.js",
   "scripts": {
     "clear": "killall node",
-    "dev": "node index.js",
-    "test": "node --expose-internals ./node_modules/.bin/mocha $(find test -name '*spec.js') --exit --recursive"
+    "test": "node --expose-internals ./node_modules/.bin/mocha $(find test -name '*spec.js') --exit --recursive",
+    "build": "postcss css/styles.css -o templates/styles.css",
+    "dev": "npm run build && live-server --port=8083 templates"
   },
   "author": "Jay McAnser",
   "license": "MIT",
@@ -15,7 +16,10 @@
     "config": "^3.3.6",
     "handlebars": "^4.7.7",
     "jshashes": "^1.0.8",
-    "wtf_wikipedia": "^8.5.1"
+    "wtf_wikipedia": "^8.5.1",
+    "autoprefixer": "^10.3.5",
+    "postcss-cli": "^9.0.0",
+    "tailwindcss": "^2.2.15"
   },
   "devDependencies": {
     "chai": "^4.3.4",
