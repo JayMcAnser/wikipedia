@@ -23,7 +23,9 @@
     @apply flex flex-row
   }
   .bio-info-extra {
-    @apply flex-none w-72 hidden md:block
+    @apply flex-none  hidden md:block w-1/4
   }
-
+  .bio-body {
+    @apply w-3/4 flex-grow
+  }
 }
