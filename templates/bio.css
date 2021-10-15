@@ -1,0 +1,5 @@
+.fold-out {
+  transition: max-height 1.5s ease-in-out;
+  overflow: hidden;
+  will-change: transform;
+}

@@ -903,6 +903,10 @@ h1 {
   font-weight: 700;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .leading-6 {
   line-height: 1.5rem;
 }
