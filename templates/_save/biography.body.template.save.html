@@ -24,12 +24,12 @@
             {{ this.title}}
           </div>
           <div class="" onclick="if (document.getElementById('{{this.id}}').style.height === '0px') { document.getElementById('{{this.id}}').style.height = 'auto'} else {document.getElementById('{{this.id}}').style.height = '0px'}">
-            <img class="float-right" src="arrow-down.png" >
+            <img class="float-right" src="../arrow-down.png" >
           </div>
         </div>
       </div>
       {{/if}}
-      <div id="{{this.id}}" class="fold-out visible">
+      <div id="{{this.id}}" class="fold-out" style="height: {{this.displayHeight}}">
         {{#each this.paragraphs}}
           <div class="bio-paragraph">
             <div class="bio-info-extra">
