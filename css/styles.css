@@ -4,28 +4,28 @@
 
 @layer base {
   p {
-    @apply pb-4;
+    @apply mk-pb-4;
   }
   h1 {
-    @apply font-bold;
+    @apply mk-font-bold;
   }
   .div-line {
-    @apply divide-solid divide-solid divide-y-2 divide-gray-900 pb-4
+    @apply mk-divide-solid mk-divide-solid mk-divide-y-2 mk-divide-gray-900 mk-pb-4
   }
   .line {
     border-top: black 2px solid;
-    @apply pt-4 mt-4;
+    @apply mk-pt-4 mk-mt-4;
   }
   .bio-segment {
-    @apply line flex flex-col space-y-4;
+    @apply line mk-flex mk-flex-col mk-space-y-4;
   }
   .bio-paragraph {
-    @apply flex flex-row
+    @apply mk-flex mk-flex-row
   }
   .bio-info-extra {
-    @apply flex-none  hidden md:block w-1/4
+    @apply mk-flex-none  mk-hidden md:mk-block mk-w-1/4
   }
   .bio-body {
-    @apply w-3/4 flex-grow
+    @apply mk-w-3/4 mk-flex-grow
   }
 }

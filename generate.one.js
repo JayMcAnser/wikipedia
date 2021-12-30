@@ -4,38 +4,121 @@ const Fs = require('fs');
 const Path = require('path');
 const MergeEngine = require('./lib/merge-engine');
 const Config = require('config');
+const Util = require('util');
 
+const optionDefinitions = [
+  { name: 'name', alias: 'n', type: String },
+  { name: 'id', alias: 'i', type: String },
+  { name: 'file', alias: 'f', type: String},
+  { name: 'directory', alias: 'd', type: String},
+  { name: 'template', alias: 't', type: String},
+  { name: 'silent', alias: 's', type: Boolean },
+  { name: 'help', alias: 'h', Boolean },
+]
 
+const commandLineArgs = require('command-line-args')
+const util = require("util");
+let options;
+try {
+  options = commandLineArgs(optionDefinitions)
+} catch (e) {
+  console.error(e.message)
+  process.exit()
+}
 
+if (options.help) {
+  console.log('usage: node generate.one.js')
+  console.log('options:');
+  console.log(' -n (name) {name} the name artist (default: Nan Hoover)')
+  console.log(' -k (key) {wikipedia id} the wikipedia id (default Q1964408)')
+  console.log(' -t (template) the template file to use relative to the root (default: templates/body.shtml)');
+  console.log(' -d (directory) the root directory to use. (default: current directory)')
+  console.log(' -f (filename) the name of the file to generate (default: temp/output.html)')
+  console.log(' -s (silent) do not display info')
+  console.log(' -h (help) this message')
+  process.exit()
+}
+
+const say = function(msg) {
+  if (!options.silent) {
+    console.log(msg)
+  }
+}
 
 let QId = [
   {name: 'Nan Hoover', key: 'Q1964408'},
 ]
 
-let runDump = async function runDump() {
+let defaults = {
+  name: 'Nan Hoover',
+  key: 'Q1964408',
+  rootDirectory: __dirname,
+  template: 'templates/body.shtml',
+  fileName: 'temp/output.html'
+}
+
+/**
+ * get the info from the command line
+ */
+let initArtists = function() {
+  say('Generate test html for the wikipedia version 0.2\n')
+  if (options.name) {
+    defaults.name = options.name
+  }
+  if (options.key) {
+    defaults.key = options.key
+  }
+  if (options.directory) {
+    defaults.rootDirectory = options.directory
+  }
+  if (options.template) {
+    defaults.template = options.template
+  }
+  if (defaults.template.substr(0,1) !== '/') {
+    defaults.template = Path.join(__dirname, defaults.template)
+  }
+
+  if (options.file) {
+    defaults.fileName = options.file
+  }
+  if (defaults.fileName.substr(0,1) !== '/') {
+    defaults.fileName = Path.join(__dirname, defaults.fileName)
+  }
+  say(`using template: ${defaults.template}`);
+  say(`output: ${defaults.fileName}`);
+  say(`importing: ${defaults.name}, key: ${defaults.key}`)
+}
+
+let runGenerate = async function runDump() {
+  initArtists()
   let blockList = Config.has('blockList') ? Config.get('blockList') : [];
   let wikiConnect = new WikiConnect.Wiki({blockList});
   let mergeEngine = new MergeEngine();
-  mergeEngine.templateFile = Path.join(__dirname, 'templates', 'biography.body.template.html')
-  let indexPage = '';
-  let rootDir = Path.join(__dirname, 'templates');
+  mergeEngine.templateFile = defaults.template; // Path.join(__dirname, 'templates', 'biography.body.template.html')
 
-  console.log(`dumping test files to ${rootDir}`);
+  let result = await wikiConnect.artistByQId(defaults.key, defaults.name)
+  mergeEngine.mergeToFile(result, defaults.fileName)
+  // let data = convert(QId[index].name, result)
+  // Fs.writeFileSync(Path.join(rootDir, `${QId[index].key}.html`), data);
+  // Fs.writeFileSync(Path.join(rootDir, 'bio.json'), JSON.stringify(result, null, 1))
 
-  for (let index = 0; index < QId.length; index++) {
-    if (QId[index].key) {
-      indexPage += `<li><a href="${QId[index].key}.html">"${QId[index].name} <small>(id: ${QId[index].key})</small></a></li>`
-      let result = await wikiConnect.artistByQId(QId[index].key, QId[index].name)
-      mergeEngine.mergeToFile(result, Path.join(rootDir, `body.html`))
-      // let data = convert(QId[index].name, result)
-      // Fs.writeFileSync(Path.join(rootDir, `${QId[index].key}.html`), data);
-      Fs.writeFileSync(Path.join(rootDir, 'bio.json'), JSON.stringify(result, null, 1))
-      console.log(`written: ${Path.join(rootDir, 'body.html')} and json: ${Path.join(rootDir, 'bio.json')} `)
-    } else {
-      indexPage += `<li>${QId[index].name} (no biography)</li>`
-    }
-  }
-  console.log('done')
+
+  // for generating a lot of info
+  // for (let index = 0; index < QId.length; index++) {
+  //   if (QId[index].key) {
+  //     indexPage += `<li><a href="${QId[index].key}.html">"${QId[index].name} <small>(id: ${QId[index].key})</small></a></li>`
+  //     let result = await wikiConnect.artistByQId(QId[index].key, QId[index].name)
+  //     mergeEngine.mergeToFile(result, Path.join(rootDir, `body.html`))
+  //     // let data = convert(QId[index].name, result)
+  //     // Fs.writeFileSync(Path.join(rootDir, `${QId[index].key}.html`), data);
+  //     Fs.writeFileSync(Path.join(rootDir, 'bio.json'), JSON.stringify(result, null, 1))
+  //     console.log(`written: ${Path.join(rootDir, 'body.html')} and json: ${Path.join(rootDir, 'bio.json')} `)
+  //   } else {
+  //     indexPage += `<li>${QId[index].name} (no biography)</li>`
+  //   }
+  // }
+  // console.log('done')
+  return 'file generated'
 }
 
 function convert(name, data) {
@@ -75,7 +158,10 @@ function convert(name, data) {
   // return JSON.stringify(data)
 }
 
-console.log('generate one biography');
-console.log('write the file body.html into the template directory');
-console.log('and uses the biography.body.template.html as definition')
-runDump()
+util.promisify(runGenerate)
+runGenerate().then(x => {
+  say(x);
+  process.exit(0)
+}).catch(e => {
+  console.log(`[Error] ${e.message}`)
+})

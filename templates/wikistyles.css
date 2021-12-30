@@ -1,0 +1,148 @@
+*, ::before, ::after {
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+p {
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.line {
+  mk-border-top: black 2px solid;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.bio-segment {
+  mk-border-top: black 2px solid;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-segment > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.bio-paragraph {
+  display: flex;
+  flex-direction: row
+}
+
+.bio-info-extra {
+  display: none;
+  width: 25%;
+  flex: none
+}
+
+@media (min-width: 768px) {
+  .bio-info-extra {
+    display: block;
+  }
+}
+
+.bio-body {
+  width: 75%;
+  flex-grow: 1
+}
+
+@-webkit-keyframes mk-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes mk-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes mk-ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes mk-ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes mk-pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@keyframes mk-pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+@-webkit-keyframes mk-bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+@keyframes mk-bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
+            animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
+            animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+*, ::before, ::after {
+  --tw-shadow: 0 0 #0000;
+}
+
+*, ::before, ::after {
+  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgba(59, 130, 246, 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+}
+
+@media (min-width: 640px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1536px) {
+}
