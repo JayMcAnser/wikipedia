@@ -1,3 +1,10 @@
+/**
+ * Wiki generator for Wikipedia and uses Tailwind
+ *
+ * see documentation: https://docs.google.com/document/d/1Eo5LC7siJOEopiXM_NLa51H0-6Bl36aGeEnQYihJDGU/edit?usp=sharing
+ * version 2.0  dd 2021-12-30
+ */
+
 
 const WikiConnect = require('./lib/wiki-connect')
 const Fs = require('fs');
