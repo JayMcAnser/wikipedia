@@ -1,5 +1,5 @@
-<div class=" bg-white rounded-xl p-6">
-  <div class="bio-segment">
+<div class="mk-bg-white mk-rounded-xl mk-p-6">
+  <div class="mk-bio-segment">
     <div class="bio-paragraph">
       <div class="bio-info-extra"></div>
       <div class="flex bio-body justify-between">
