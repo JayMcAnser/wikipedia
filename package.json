@@ -1,4 +1,7 @@
 {
+  "watch": {
+    "generate": "templates/body.shtml"
+  },
   "name": "wikipedia",
   "version": "1.5.0",
   "description": "Wikipedia mediakunst connector",
@@ -7,7 +10,10 @@
     "clear": "killall node",
     "test": "node --expose-internals ./node_modules/.bin/mocha $(find test -name '*spec.js') --exit --recursive",
     "build": "postcss css/styles.css -o templates/styles.css",
-    "dev": "npm run build && live-server --port=8083 templates"
+    "dev": "npm run build && live-server --port=8083 templates",
+    "tailwind:watch": "npm run watch",
+    "tailwind:dev": "npx tailwindcss --output css/wikibio.css --watch",
+    "generate": "node generate.one.js"
   },
   "author": "Jay McAnser",
   "license": "MIT",
@@ -25,6 +31,7 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
-    "mocha": "^9.0.3"
+    "mocha": "^9.0.3",
+    "npm-watch": "^0.11.0"
   }
 }
