@@ -135,7 +135,10 @@ let runGenerate = async function() {
     blockList,
     imagePath: defaults.image
   });
-  let mergeEngine = new MergeEngine();
+  let mergeEngine = new MergeEngine(undefined, {
+    bold: {openTag: '<span class="mk-font-bold">'},
+    italic: {openTag: '<span class="mk-italic">'}
+  });
   mergeEngine.templateFile = defaults.template; // Path.join(__dirname, 'templates', 'biography.body.template.html')
   // let indexPage = '';
   // let rootDir = Path.join(__dirname, 'templates');

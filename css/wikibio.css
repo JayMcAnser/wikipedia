@@ -1,3 +1,8 @@
+*, ::before, ::after {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity))
+}
+
 .mk-visible {
   visibility: visible
 }
@@ -36,8 +41,20 @@
   right: 0px
 }
 
-.mk-bottom-0 {
-  bottom: 0px
+.mk-top-10 {
+  top: 2.5rem
+}
+
+.mk-bottom-10 {
+  bottom: 2.5rem
+}
+
+.mk-left-10 {
+  left: 2.5rem
+}
+
+.mk-right-10 {
+  right: 2.5rem
 }
 
 .mk-z-20 {
@@ -46,6 +63,14 @@
 
 .mk-z-30 {
   z-index: 30
+}
+
+.mk-col-span-1 {
+  grid-column: span 1 / span 1
+}
+
+.mk-col-span-3 {
+  grid-column: span 3 / span 3
 }
 
 .mk-float-right {
@@ -57,28 +82,65 @@
   margin-right: auto
 }
 
-.mk-mt-10 {
-  margin-top: 2.5rem
+.mk-mt-5 {
+  margin-top: 1.25rem
 }
 
 .mk-block {
   display: block
 }
 
+.mk-grid {
+  display: grid
+}
+
 .mk-h-full {
   height: 100%
 }
 
-.mk-max-w-screen-lg {
-  max-width: 1024px
+.mk-h-72 {
+  height: 18rem
+}
+
+.mk-max-w-screen-2xl {
+  max-width: 1536px
+}
+
+.mk-grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr))
+}
+
+.mk-divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse))
+}
+
+.mk-divide-x-0 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-x-reverse: 0;
+  border-right-width: calc(0px * var(--tw-divide-x-reverse));
+  border-left-width: calc(0px * calc(1 - var(--tw-divide-x-reverse)))
+}
+
+.mk-divide-solid > :not([hidden]) ~ :not([hidden]) {
+  border-style: solid
+}
+
+.mk-divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-divide-opacity))
 }
 
 .mk-overflow-auto {
   overflow: auto
 }
 
-.mk-rounded-xl {
-  border-radius: 0.75rem
+.mk-rounded-2xl {
+  border-radius: 1rem
+}
+
+.mk-rounded-md {
+  border-radius: 0.375rem
 }
 
 .mk-bg-gray-600 {
@@ -91,10 +153,6 @@
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 
-.mk-p-6 {
-  padding: 1.5rem
-}
-
 .mk-p-3 {
   padding: 0.75rem
 }
@@ -103,9 +161,31 @@
   vertical-align: middle
 }
 
+.mk-font-body {
+  font-family: Arial, Helvetica
+}
+
+.mk-text-hdr {
+  font-size: 1.625rem;
+  line-height: 32px
+}
+
+.mk-font-bold {
+  font-weight: 700
+}
+
+.mk-italic {
+  font-style: italic
+}
+
 .mk-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+.mk-text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity))
 }
 
 .mk-opacity-75 {

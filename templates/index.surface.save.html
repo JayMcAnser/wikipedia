@@ -53,17 +53,19 @@
 <body class="mk-bg-gray-600">
 <div class="mk-block" id="dia-visible">
   <div class="mk-fixed mk-inset-x-0 mk-inset-y-0 mk-z-20 " id="dia-click-surface">
-    <div class="mk-relative mk-max-w-screen-2xl mk-h-full mk-mx-auto" id="dia-canvas">
+    <div class="mk-relative mk-max-w-screen-lg mk-h-full mk-mx-auto" id="dia-canvas">
       <div class="mk-absolute mk-top-0 mk-left-0 mk-right-0 mk-p-3 mk-z-30 mk-opacity-75" id="dia-close">
-        <div class=" mk-mx-auto" id="dia-close-panel">
+        <div class="mk-max-w-screen-lg mk-mx-auto" id="dia-close-panel">
           <div class="mk-float-right mk-align-middle mk-text-white">x</div>
         </div>
       </div>
       <div class="" id="dia-dialog">
-        <div class="mk-absolute mk-top-10 mk-left-0 mk-right-0 mk-bottom-10 mk-block mk-overflow-auto mk-bg-white  mk-rounded-2xl" id="dia-content">
-          <!-- beginning of body -->
-          <div class="mk-absolute mk-top-10 mk-left-10 mk-right-10 mk-bottom-10 mk-block mk-overflow-auto" w3-include-html="../temp/output.html"></div>
-          <!-- end of body -->
+        <div class="mk-absolute mk-mt-10 mk-mb-10 mk-top-0 mk-left-0 mk-right-0 mk-bottom-0 mk-block mk-overflow-auto" id="dia-content">
+          <div class="mk-absolute mk-top-10" id="dia-body">
+            <!-- beginning of body -->
+            <div w3-include-html="../temp/output.html"></div>
+            <!-- end of body -->
+          </div>
         </div>
       </div>
     </div>

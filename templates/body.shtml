@@ -1,67 +1,72 @@
-<div class="mk-bg-white mk-rounded-xl mk-p-6">
-  <div class="mk-bio-segment">
-    <div class="bio-paragraph">
-      <div class="bio-info-extra"></div>
-      <div class="flex bio-body justify-between">
-        <div class="text-lg leading-6 font-medium text-gray-900">
+<div class="mk-font-body mk-bg-white mk-grid  mk-divide-y mk-divide-x-0 mk-divide-solid mk-divide-gray-700">
+  <div class="mk-col-span-1">
+    <!-- empty so line is generated-->
+  </div>
+  <div class="mk-col-span-1">
+    <div class="mk-grid mk-grid-cols-5">
+      <div class="mk-col-span-1"> &nbsp;</div>
+      <div class="mk-col-span-3">
+        <div class="mk-text-hdr mk-mt-5 mk-text-gray-900">
           {{artistName}}
         </div>
-        <div class="">
-          {{#if this.images}}
-            <img class="rounded-md h-60 w-full" src="{{this.images.[0]}}" />
-          {{/if}}
-        </div>
+      </div>
+      <div class="mk-col-span-1">
+        {{#if this.images}}
+        <img class="mk-rounded-md mk-h-72 mk-float-right" src="{{this.images.[0].url}}" />
+        {{/if}}
       </div>
     </div>
   </div>
   {{#each bio}}
-    <div class="bio-segment">
-      {{#if this.title}}
-      <div class="bio-paragraph">
-        <div class="bio-info-extra"></div>
-        <div class="flex bio-body justify-between">
-          <div class="text-lg leading-6 font-medium text-gray-900">
+    {{#if this.title}}
+      <div class="mk-col-span-1">
+        <div class="mk-grid mk-grid-cols-5">
+          <div class="mk-col-span-1"></div>
+          <div class="mk-col-span-3 text-lg leading-6 font-medium text-gray-900">
             {{ this.title}}
           </div>
-          <div class="" onclick="if (document.getElementById('{{this.id}}').style.height === '0px') { document.getElementById('{{this.id}}').style.height = 'auto'} else {document.getElementById('{{this.id}}').style.height = '0px'}">
+          <div class="mk-col-span-1" onclick="if (document.getElementById('{{this.id}}').style.height === '0px') { document.getElementById('{{this.id}}').style.height = 'auto'} else {document.getElementById('{{this.id}}').style.height = '0px'}">
             <img class="float-right" src="arrow-down.png" >
           </div>
         </div>
       </div>
-      {{/if}}
-      <div id="{{this.id}}" class="fold-out visible">
-        {{#each this.paragraphs}}
-          <div class="bio-paragraph">
-            <div class="bio-info-extra">
-              {{#each this.years}}
-                {{this}}<br>
-              {{/each}}
-            </div>
-            <div class="">
-              {{#if this.isQuote}}
-                <blockquote>
+    {{/if}}
+    {{#each this.paragraphs}}
+
+    <div class="mk-col-span-1">
+      <div class="mk-grid mk-grid-cols-5">
+        <div class="mk-col-span-1">
+          {{#each this.years}}
+          {{this}}<br>
+          {{/each}}
+        </div>
+        <div class="mk-col-span-3">
+          <div class="">
+            {{#if this.isQuote}}
+            <blockquote>
               {{/if}}
               {{#each this.sentences}}
-                {{textlayout this}}
+              {{textlayout this}}
               {{/each}}
               {{#if this.isQuote}}
-                </blockquote>
-              {{/if}}
-              {{#each this.lists}}
-              <ul>
-                {{#each this.items}}
-                <li>{{textlayout this}}</li>
-                {{/each}}
-              </ul>
+            </blockquote>
+            {{/if}}
+            {{#each this.lists}}
+            <ul>
+              {{#each this.items}}
+              <li>{{textlayout this}}</li>
               {{/each}}
-            </div>
-            <div class="bio-info-extra"></div>
+            </ul>
+            {{/each}}
           </div>
-        {{/each}}
+        </div>
+        <div class="mk-col-span-1">
+        </div>
       </div>
     </div>
+    {{/each}}
+
   {{/each}}
-  <!-- end of merge -->
   <p>The last line</p>
 </div>
 <div class="relative bg-gray-900 text-white p-3" id="dia-footer">
