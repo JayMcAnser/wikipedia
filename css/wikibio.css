@@ -15,10 +15,6 @@
   visibility: visible
 }
 
-.mk-invisible {
-  visibility: hidden
-}
-
 .mk-fixed {
   position: fixed
 }
@@ -89,49 +85,57 @@
   float: right
 }
 
+.mk--m-6 {
+  margin: -1.5rem
+}
+
+.mk--m-3 {
+  margin: -0.75rem
+}
+
+.mk-m-0 {
+  margin: 0px
+}
+
 .mk-mx-auto {
   margin-left: auto;
   margin-right: auto
-}
-
-.mk-mb-10 {
-  margin-bottom: 2.5rem
-}
-
-.mk-mt-5 {
-  margin-top: 1.25rem
-}
-
-.mk-mb-8 {
-  margin-bottom: 2rem
-}
-
-.mk-mt-2 {
-  margin-top: 0.5rem
-}
-
-.mk-mb-4 {
-  margin-bottom: 1rem
 }
 
 .mk-mb-5 {
   margin-bottom: 1.25rem
 }
 
+.mk-mt-5 {
+  margin-top: 1.25rem
+}
+
+.mk-mb-10 {
+  margin-bottom: 2.5rem
+}
+
 .mk-mt-4 {
   margin-top: 1rem
 }
 
-.mk-mt-8 {
-  margin-top: 2rem
+.mk--mt-2 {
+  margin-top: -0.5rem
 }
 
 .mk-block {
   display: block
 }
 
+.mk-inline {
+  display: inline
+}
+
 .mk-grid {
   display: grid
+}
+
+.mk-h-0 {
+  height: 0px
 }
 
 .mk-h-full {
@@ -142,16 +146,18 @@
   height: 18rem
 }
 
-.mk-h-0 {
-  height: 0px
-}
-
 .mk-max-w-screen-2xl {
   max-width: 1536px
 }
 
 .mk-origin-top {
   transform-origin: top
+}
+
+.mk-scale-50 {
+  --tw-scale-x: .5;
+  --tw-scale-y: .5;
+  transform: var(--tw-transform)
 }
 
 .mk-scale-y-0 {
@@ -214,6 +220,11 @@
   background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
 
+.mk-bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+}
+
 .mk-p-3 {
   padding: 0.75rem
 }
@@ -230,13 +241,17 @@
   font-family: Arial, Helvetica
 }
 
+.mk-text-body {
+  font-size: 1rem
+}
+
 .mk-text-hdr {
   font-size: 1.625rem;
   line-height: 32px
 }
 
-.mk-text-body {
-  font-size: 1rem
+.mk-text-year {
+  font-size: 0.90rem
 }
 
 .mk-font-bold {
@@ -257,20 +272,20 @@
   color: rgb(17 24 39 / var(--tw-text-opacity))
 }
 
+.mk-text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity))
+}
+
+.mk-no-underline {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none
+}
+
 .mk-opacity-75 {
   opacity: 0.75
 }
 
-.mk-transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms
-}
-
-.mk-ease-out {
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1)
-}
-
-.mk-ease-in-out {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+.mk-opacity-25 {
+  opacity: 0.25
 }

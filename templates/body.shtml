@@ -21,13 +21,14 @@
   {{#each bio}}
     <div class="mk-col-span-1">
     {{#if this.title}}
-        <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-4" onclick="document.toggle('#tx-{{id}}')">
+        <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-4" onclick="document.toggle('{{id}}')">
           <div class="mk-col-span-1"></div>
           <div class="mk-text-lg mk-font-bold mk-font-hdr mk-col-span-3 mk-text-gray-900">
             {{ this.title}}
           </div>
-          <div class="mk-col-span-1" onclick="if (document.getElementById('{{this.id}}').style.height === '0px') { document.getElementById('{{this.id}}').style.height = 'auto'} else {document.getElementById('{{this.id}}').style.height = '0px'}">
-            <img class="mk-float-right" src="arrow-down.png" >
+          <div class="mk-col-span-1 mk--m-3">
+            <img class="mk-float-right " id="tx-{{id}}-down" src="images/down.svg" >
+            <img class="mk-float-right mk-h-0" id="tx-{{id}}-up" src="images/up.svg" >
           </div>
         </div>
     {{else}}
@@ -36,7 +37,7 @@
     <div class="{{#if this.title}}mk-h-0{{/if}} mk-overflow-hidden mk-origin-top mk-transform" id="tx-{{this.id}}">
     {{#each this.paragraphs}}
       <div class="mk-grid mk-grid-cols-5 mk-mb-5">
-        <div class="mk-col-span-1">
+        <div class="mk-col-span-1 mk-text-gray-600 mk-font-hdr mk-text-year">
           {{#each this.years}}
           {{this}}<br>
           {{/each}}
@@ -69,8 +70,17 @@
       </div>
     </div>
   {{/each}}
-  <p>The last line</p>
-</div>
-<div class="relative bg-gray-900 text-white p-3" id="dia-footer">
-  This is the footer
+  <div class="mk-col-span-1">
+    <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-5">
+      <div class="mk-col-span-1"></div>
+      <div class="mk-text-lg mk-font-bold mk-font-hdr mk-col-span-3 mk-text-gray-900">
+        <a class="mk-no-underline mk-text-gray-900" href="{{wikiUrl}}" target="_blank">
+          <div class="mk-inline">Source Wikipedia </div>
+          <div class="mk-inline"><img src="images/right.svg"></div>
+        </a>
+      </div>
+      </div>
+      <div class="mk-col-span-1"> </div>
+    </div>
+  </div>
 </div>

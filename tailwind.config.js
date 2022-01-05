@@ -14,7 +14,8 @@ module.exports = {
       'hdr': ['1.625rem', {
         'lineHeight': '32px'
       }],
-      'body': ['1rem']
+      'body': ['1rem'],
+      'year': ['0.90rem']
     },
     fontFamily: {
       hdr: ['Arial', 'Helvetica'],
