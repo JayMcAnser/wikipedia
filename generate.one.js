@@ -136,7 +136,7 @@ let runGenerate = async function() {
     imagePath: defaults.image
   });
   let mergeEngine = new MergeEngine(undefined, {
-    bold: {openTag: '<span class="mk-font-bold">'},
+    bold: {openTag: '<span class="mk-font-bold mk-font-hdr">'},
     italic: {openTag: '<span class="mk-italic">'}
   });
   mergeEngine.templateFile = defaults.template; // Path.join(__dirname, 'templates', 'biography.body.template.html')

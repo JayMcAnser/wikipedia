@@ -1,12 +1,12 @@
-<div class="mk-font-body mk-bg-white mk-grid  mk-divide-y mk-divide-x-0 mk-divide-solid mk-divide-gray-700">
+<div class="mk-font-body mk-text-body mk-bg-white mk-grid  mk-divide-y mk-divide-x-0 mk-divide-solid mk-divide-gray-700">
   <div class="mk-col-span-1">
     <!-- empty so line is generated-->
   </div>
   <div class="mk-col-span-1">
-    <div class="mk-grid mk-grid-cols-5">
+    <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-5">
       <div class="mk-col-span-1"> &nbsp;</div>
       <div class="mk-col-span-3">
-        <div class="mk-text-hdr mk-mt-5 mk-text-gray-900">
+        <div class="mk-text-hdr mk-font-hdr mk-text-gray-900">
           {{artistName}}
         </div>
       </div>
@@ -18,23 +18,22 @@
     </div>
   </div>
   {{#each bio}}
+    <div class="mk-col-span-1">
     {{#if this.title}}
-      <div class="mk-col-span-1">
-        <div class="mk-grid mk-grid-cols-5">
+        <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-4">
           <div class="mk-col-span-1"></div>
-          <div class="mk-col-span-3 text-lg leading-6 font-medium text-gray-900">
+          <div class="mk-text-lg mk-font-bold mk-font-hdr mk-col-span-3 mk-text-gray-900">
             {{ this.title}}
           </div>
           <div class="mk-col-span-1" onclick="if (document.getElementById('{{this.id}}').style.height === '0px') { document.getElementById('{{this.id}}').style.height = 'auto'} else {document.getElementById('{{this.id}}').style.height = '0px'}">
-            <img class="float-right" src="arrow-down.png" >
+            <img class="mk-float-right" src="arrow-down.png" >
           </div>
         </div>
-      </div>
+    {{else}}
+      <div class="mk-mb-10"></div>
     {{/if}}
     {{#each this.paragraphs}}
-
-    <div class="mk-col-span-1">
-      <div class="mk-grid mk-grid-cols-5">
+      <div class="mk-grid mk-grid-cols-5 mk-mb-5">
         <div class="mk-col-span-1">
           {{#each this.years}}
           {{this}}<br>
@@ -63,9 +62,9 @@
         <div class="mk-col-span-1">
         </div>
       </div>
-    </div>
-    {{/each}}
 
+    {{/each}}
+    </div>
   {{/each}}
   <p>The last line</p>
 </div>

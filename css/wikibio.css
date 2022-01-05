@@ -82,8 +82,36 @@
   margin-right: auto
 }
 
+.mk-mb-10 {
+  margin-bottom: 2.5rem
+}
+
 .mk-mt-5 {
   margin-top: 1.25rem
+}
+
+.mk-mb-8 {
+  margin-bottom: 2rem
+}
+
+.mk-mt-2 {
+  margin-top: 0.5rem
+}
+
+.mk-mb-4 {
+  margin-bottom: 1rem
+}
+
+.mk-mb-5 {
+  margin-bottom: 1.25rem
+}
+
+.mk-mt-4 {
+  margin-top: 1rem
+}
+
+.mk-mt-8 {
+  margin-top: 2rem
 }
 
 .mk-block {
@@ -162,12 +190,20 @@
 }
 
 .mk-font-body {
+  font-family: Georgia, ui-serif, Cambria, Times New Roman, Times, serif
+}
+
+.mk-font-hdr {
   font-family: Arial, Helvetica
 }
 
 .mk-text-hdr {
   font-size: 1.625rem;
   line-height: 32px
+}
+
+.mk-text-body {
+  font-size: 1rem
 }
 
 .mk-font-bold {

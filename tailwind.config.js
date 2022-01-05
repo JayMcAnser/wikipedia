@@ -13,10 +13,12 @@ module.exports = {
     fontSize: {
       'hdr': ['1.625rem', {
         'lineHeight': '32px'
-      }]
+      }],
+      'body': ['1rem']
     },
     fontFamily: {
-      body: ['Arial', 'Helvetica']
+      hdr: ['Arial', 'Helvetica'],
+      body: ['Georgia', 'ui-serif', 'Cambria', 'Times New Roman', 'Times', 'serif']
     },
     extend: {},
   },
