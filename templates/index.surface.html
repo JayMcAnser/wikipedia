@@ -31,26 +31,42 @@
         }
       }
     }
-    document.say = function(x) {
-      alert(x)
-    }
-    document.slide = function() {
-      return {
-        toggle($event) {
-          const target = document.querySelector($event.target.dataset.target);
+    // document.say = function(x) {
+    //   alert(x)
+    // }
+    // document.slide = function() {
+    //   return {
+    //     toggle($event) {
+    //       const target = document.querySelector($event.target.dataset.target);
+    //
+    //       if ($event.target.dataset.duration) {
+    //         target.style.transitionDuration = `${$event.target.dataset.duration}ms`;
+    //       }
+    //
+    //       target.classList.toggle("scale-y-0");
+    //     }
+    //   };
+    // }
+  </script>
 
-          if ($event.target.dataset.duration) {
-            target.style.transitionDuration = `${$event.target.dataset.duration}ms`;
-          }
+  <script >
+    document.toggle = function(id, duration = 300) {
+      console.log(id, duration);
+      //return
+      const target = document.querySelector(id);
 
-          target.classList.toggle("scale-y-0");
-        }
-      };
+      if (duration) {
+        target.style.transitionDuration = `${duration}ms`;
+      }
+      // target.classList.toggle("mk-scale-y-0");
+      target.classList.toggle('mk-h-0')
     }
+
   </script>
 </head>
 
-<body class="mk-bg-gray-600">
+<body class="mk-bg-gray-600"">
+
 <div class="mk-block" id="dia-visible">
   <div class="mk-fixed mk-inset-x-0 mk-inset-y-0 mk-z-20 " id="dia-click-surface">
     <div class="mk-relative mk-max-w-screen-2xl mk-h-full mk-mx-auto" id="dia-canvas">

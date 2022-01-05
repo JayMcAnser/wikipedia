@@ -1,4 +1,5 @@
-<div class="mk-font-body mk-text-body mk-bg-white mk-grid  mk-divide-y mk-divide-x-0 mk-divide-solid mk-divide-gray-700">
+
+<div class="mk-font-body mk-text-body mk-bg-white mk-grid  mk-divide-y mk-divide-x-0 mk-divide-solid mk-divide-gray-700" x-data="slide()">
   <div class="mk-col-span-1">
     <!-- empty so line is generated-->
   </div>
@@ -20,7 +21,7 @@
   {{#each bio}}
     <div class="mk-col-span-1">
     {{#if this.title}}
-        <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-4">
+        <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-4" onclick="document.toggle('#tx-{{id}}')">
           <div class="mk-col-span-1"></div>
           <div class="mk-text-lg mk-font-bold mk-font-hdr mk-col-span-3 mk-text-gray-900">
             {{ this.title}}
@@ -32,6 +33,7 @@
     {{else}}
       <div class="mk-mb-10"></div>
     {{/if}}
+    <div class="{{#if this.title}}mk-h-0{{/if}} mk-overflow-hidden mk-origin-top mk-transform" id="tx-{{this.id}}">
     {{#each this.paragraphs}}
       <div class="mk-grid mk-grid-cols-5 mk-mb-5">
         <div class="mk-col-span-1">
@@ -64,6 +66,7 @@
       </div>
 
     {{/each}}
+      </div>
     </div>
   {{/each}}
   <p>The last line</p>
