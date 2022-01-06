@@ -118,6 +118,10 @@
   margin-top: 1rem
 }
 
+.mk-mt-10 {
+  margin-top: 2.5rem
+}
+
 .mk-block {
   display: block
 }
@@ -148,6 +152,10 @@
 
 .mk-max-w-screen-2xl {
   max-width: 1536px
+}
+
+.mk-max-w-screen-lg {
+  max-width: 1024px
 }
 
 .mk-origin-top {
@@ -214,6 +222,11 @@
   background-color: rgb(0 0 0 / var(--tw-bg-opacity))
 }
 
+.mk-bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity))
+}
+
 .mk-p-0 {
   padding: 0px
 }
@@ -265,6 +278,11 @@
   color: rgb(31 41 55 / var(--tw-text-opacity))
 }
 
+.mk-text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity))
+}
+
 .mk-text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity))
@@ -275,11 +293,6 @@
   color: rgb(75 85 99 / var(--tw-text-opacity))
 }
 
-.mk-text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity))
-}
-
 .mk-no-underline {
   -webkit-text-decoration-line: none;
           text-decoration-line: none
@@ -287,4 +300,8 @@
 
 .mk-opacity-80 {
   opacity: 0.8
+}
+
+.mk-opacity-75 {
+  opacity: 0.75
 }
