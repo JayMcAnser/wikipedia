@@ -5,7 +5,7 @@
   </div>
   <div class="mk-col-span-1">
     <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-5">
-      <div class="mk-col-span-1 mk-text-gray-700 mk-font-text-lg mk-font-hdr"> &nbsp;
+      <div class="mk-col-span-1 mk-text-gray-700 mk-font-text-lg mk-font-hdr">
         <img src="images/left.svg"><span> Back to article</span>
       </div>
       <div class="mk-col-span-3">
