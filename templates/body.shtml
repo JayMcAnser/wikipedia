@@ -1,11 +1,13 @@
 
-<div class="mk-font-body mk-text-body mk-bg-white mk-grid  mk-divide-y mk-divide-x-0 mk-divide-solid mk-divide-gray-700" x-data="slide()">
+<div class="mk-font-body mk-text-body mk-text-gray-800 mk-bg-white mk-grid  mk-divide-y mk-divide-x-0 mk-divide-solid mk-divide-gray-700" x-data="slide()">
   <div class="mk-col-span-1">
     <!-- empty so line is generated-->
   </div>
   <div class="mk-col-span-1">
     <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-5">
-      <div class="mk-col-span-1"> &nbsp;</div>
+      <div class="mk-col-span-1 mk-text-gray-700 mk-font-text-lg mk-font-hdr"> &nbsp;
+        <img src="images/left.svg"><span> Back to article</span>
+      </div>
       <div class="mk-col-span-3">
         <div class="mk-text-hdr mk-font-hdr mk-text-gray-900">
           {{artistName}}

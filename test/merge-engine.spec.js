@@ -25,11 +25,11 @@ describe('merge-engine', function () {
     me.templateFile = Path.join(__dirname, 'data/template.replace.html')
     let data = JSON.parse(Fs.readFileSync(Path.join(__dirname, 'data/replace.data.json'), 'utf8'));
     let result = me.merge(data);
-    assert.include(result, '<span class="bold">Nan Hoover</span>', 'should replace it')
+    assert.include(result, '<span class="mk-font-bold mk-font-hdr">Nan Hoover</span>', 'should replace it')
   })
 
   it('custom replace', () => {
-    let me = new MergeEngine(undefined, {bold: { openTag: '<span class="mk-font-bold">'}});
+    let me = new MergeEngine(undefined, {blockReplace: {bold: { openTag: '<span class="mk-font-bold">'}}});
     me.templateFile = Path.join(__dirname, 'data/template.replace.html')
     let data = JSON.parse(Fs.readFileSync(Path.join(__dirname, 'data/replace.data.json'), 'utf8'));
     let result = me.merge(data);
@@ -37,3 +37,5 @@ describe('merge-engine', function () {
   })
 
 });
+
+
