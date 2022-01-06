@@ -65,6 +65,10 @@
   right: 2.5rem
 }
 
+.mk-bottom-0 {
+  bottom: 0px
+}
+
 .mk-z-20 {
   z-index: 20
 }
@@ -144,6 +148,10 @@
 
 .mk-h-72 {
   height: 18rem
+}
+
+.mk-w-full {
+  width: 100%
 }
 
 .mk-max-w-screen-2xl {
@@ -229,6 +237,10 @@
   padding: 0.75rem
 }
 
+.mk-p-0 {
+  padding: 0px
+}
+
 .mk-align-middle {
   vertical-align: middle
 }
@@ -288,4 +300,12 @@
 
 .mk-opacity-25 {
   opacity: 0.25
+}
+
+.mk-opacity-80 {
+  opacity: 0.8
+}
+
+.mk-opacity-70 {
+  opacity: 0.7
 }

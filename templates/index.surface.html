@@ -75,21 +75,25 @@
   </script>
 </head>
 
-<body class="mk-bg-white mk-m-0">
+<body class="mk-bg-white mk-m-0 ">
 
-  <div class="mk-block mk-bg-black" id="dia-visible">
+  <div class="mk-fixed mk-bottom-0 mk-top-0 mk-left-0 mk-right-0" id="dia-visible">
+    <div class="mk-bg-black mk-w-full mk-h-full mk-opacity-80">
+
+    </div>
     <div class="mk-fixed mk-inset-x-0 mk-inset-y-0 mk-z-20 " id="dia-click-surface">
       <div class="mk-relative mk-max-w-screen-2xl mk-h-full mk-mx-auto" id="dia-canvas">
-        <div class="mk-absolute mk-top-0 mk-left-0 mk-right-0 mk-p-3 mk-z-30 " id="dia-close">
+        <div class="mk-absolute mk-p-0 mk-top-0 mk-left-0 mk-right-0 mk-p-3 mk-z-30 " id="dia-close"
+             onclick="alert('close this')"
+        >
           <div class=" mk-mx-auto" id="dia-close-panel">
-            <div class="mk-float-right mk-align-middle mk-text-white">x</div>
+            <div class="mk-float-right mk-align-middle mk-text-white">
+              <img src="images/close.svg"></div>
           </div>
         </div>
         <div class="" id="dia-dialog">
           <div class="mk-absolute mk-top-10 mk-left-0 mk-right-0 mk-bottom-10 mk-block mk-overflow-auto mk-bg-white  mk-rounded-2xl" id="dia-content">
-            <!-- beginning of body -->
             <div class="mk-absolute mk-top-10 mk-left-10 mk-right-10 mk-bottom-10 mk-block mk-overflow-auto" w3-include-html="../temp/output.html"></div>
-            <!-- end of body -->
           </div>
         </div>
       </div>
