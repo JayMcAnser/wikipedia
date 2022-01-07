@@ -5,7 +5,7 @@
   </div>
   <div class="mk-col-span-1">
     <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-5">
-      <div class="mk-col-span-1 mk-text-gray-700 mk-font-text-lg mk-font-hdr">
+      <div class="mk-col-span-1 mk-text-gray-700 mk-font-text-lg mk-font-hdr mk-mt-3">
         <img src="images/left.svg"><span> Back to article</span>
       </div>
       <div class="mk-col-span-3">
@@ -23,7 +23,7 @@
   {{#each bio}}
     <div class="mk-col-span-1">
     {{#if this.title}}
-        <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-4" onclick="document.toggle('{{id}}')">
+        <div class="mk-grid mk-grid-cols-5 mk-mb-3 mk-mt-3" onclick="document.toggle('{{id}}')">
           <div class="mk-col-span-1"></div>
           <div class="mk-text-lg mk-font-bold mk-font-hdr mk-col-span-3 mk-text-gray-900">
             {{ this.title}}
@@ -34,7 +34,7 @@
           </div>
         </div>
     {{else}}
-      <div class="mk-mb-10"></div>
+      <div class="mk-mb-4"></div>
     {{/if}}
     <div class="{{#if this.title}}mk-h-0{{/if}} mk-overflow-hidden mk-origin-top mk-transform" id="tx-{{this.id}}">
     {{#each this.paragraphs}}
@@ -73,9 +73,15 @@
     </div>
   {{/each}}
   <div class="mk-col-span-1">
-    <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-5">
+    <div class="mk-grid mk-grid-cols-5 mk-mt-5">
       <div class="mk-col-span-1"></div>
       <div class="mk-text-lg mk-font-bold mk-font-hdr mk-col-span-3 mk-text-gray-900">
+        <a class="mk-no-underline mk-text-gray-900" href="{{wikiUrl}}" target="_blank">
+          <div class="mk-inline">View artworks by {{artistName}}</div>
+          <div class="mk-inline"><img src="images/right.svg"></div>
+        </a>
+        <br/>
+        <br/><br/><br/><br/>
         <a class="mk-no-underline mk-text-gray-900" href="{{wikiUrl}}" target="_blank">
           <div class="mk-inline">Source Wikipedia </div>
           <div class="mk-inline"><img src="images/right.svg"></div>
