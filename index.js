@@ -55,8 +55,8 @@ const mergeTemplate = async function(qId, name, template, options = {}) {
   return mergeEngine.merge(json)
 }
 
-const merge = async function(json, template, isFile = true) {
-  let mergeEngine = new MergeEngine(options);
+const merge = async function(json, template, isFile = true, options= {}) {
+  let mergeEngine = new MergeEngine();
   if (isFile) {
     mergeEngine.templateFile = template
   } else {
