@@ -11,5 +11,8 @@
   },
   "path": {
     "images": "data/images"
+  },
+  "Mediakunst" : {
+    "listUrl": "/search?query=~(id~3~parts~(~(id~2~value~'[artistName]~fields~(~'title~'artist~'description~'keyword~'collectionSearch~'yearSearch)~combine~'~!!hashKey~'object*3a249))~filters~()~order~(column~'yearOrder~columnDesc~false~row~'titleOrder~rowDesc~false)~random~0)"
   }
 }

@@ -30,46 +30,40 @@
           return;
         }
       }
+      connect()
     }
-    // document.say = function(x) {
-    //   alert(x)
-    // }
-    // document.slide = function() {
-    //   return {
-    //     toggle($event) {
-    //       const target = document.querySelector($event.target.dataset.target);
-    //
-    //       if ($event.target.dataset.duration) {
-    //         target.style.transitionDuration = `${$event.target.dataset.duration}ms`;
-    //       }
-    //
-    //       target.classList.toggle("scale-y-0");
-    //     }
-    //   };
-    // }
   </script>
 
   <script >
+    const connect = function() {
+      const isArticle = true; // show article parts
+      var divs = document.querySelectorAll('.panel-event');
+     // console.log('DIVS', divs)
+      divs.forEach(el => el.addEventListener('click', function(event) {
 
-    // could use: https://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css
-    document.toggle = function(id, duration = 300) {
-      console.log(id, duration);
-      let target = document.querySelector(`#tx-${id}`);
-      if (target) {
-        if (duration) {
-          target.style.transitionDuration = `${duration}ms`;
-        }
-        // target.classList.toggle("mk-scale-y-0");
-        target.classList.toggle('mk-h-0');
-        target = document.querySelector(`#tx-${id}-up`);
-        if (target) {
-          target.classList.toggle('mk-h-0');
-        }
-        target = document.querySelector(`#tx-${id}-down`);
-        if (target) {
-          target.classList.toggle('mk-h-0');
-        }
+        let id = this.id;
+        if (id) {
+            let target = document.querySelector(`#panel-${id}`);
+            if (target) {
+              target.classList.toggle('mk-h-0');
+              var up = document.querySelector(`#btn-${id}-up`);
+              if (up) {
+                up.classList.toggle('mk-h-0');
+              }
+              var down = document.querySelector(`#btn-${id}-down`);
+              if (down) {
+                down.classList.toggle('mk-h-0');
+              }
+            }
+          }
+      }));
+      if (!isArticle) {
+        let articleDivs = document.querySelectorAll('.article');
+        articleDivs.forEach((el) => {
+          el.classList.add('mk-invisible')
+        })
       }
+      // alert(`bind to ${divs.length} elements`)
     }
 
   </script>
@@ -84,11 +78,11 @@
     <div class="mk-fixed mk-inset-x-0 mk-inset-y-0 mk-z-20 " id="dia-click-surface">
       <div class="mk-relative mk-max-w-screen-2xl mk-h-full mk-mx-auto mk-p-0" id="dia-canvas">
         <div class="mk-absolute mk-p-0 mk-top-0 mk-left-0 mk-right-0 mk-z-30 " id="dia-close"
-             onclick="alert('close this')"
+             onclick="connect()"
         >
           <div class=" mk-mx-auto" id="dia-close-panel">
             <div class="mk-float-right mk-align-middle mk-text-white">
-              <img src="images/close.svg"></div>
+              <img src="images/wiki-close.svg"></div>
           </div>
         </div>
         <div class="" id="dia-dialog">
