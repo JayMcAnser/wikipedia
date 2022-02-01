@@ -113,6 +113,22 @@
   bottom: 1.25rem
 }
 
+.mk-top-20 {
+  top: 5rem
+}
+
+.mk-bottom-20 {
+  bottom: 5rem
+}
+
+.mk-top-12 {
+  top: 3rem
+}
+
+.mk-bottom-12 {
+  bottom: 3rem
+}
+
 .mk-z-20 {
   z-index: 20
 }
@@ -164,6 +180,14 @@
 
 .mk-mb-3 {
   margin-bottom: 0.75rem
+}
+
+.mk--mt-4 {
+  margin-top: -1rem
+}
+
+.mk--mt-2 {
+  margin-top: -0.5rem
 }
 
 .mk-block {
