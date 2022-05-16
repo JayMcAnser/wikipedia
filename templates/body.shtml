@@ -1,12 +1,12 @@
-
-<div class="mk-font-body mk-text-body mk-text-gray-800 mk-bg-white mk-grid  mk-divide-y mk-divide-x-0 mk-divide-solid mk-divide-gray-700" x-data="slide()">
+<!-- classes to include: hidden -->
+<div class="mk-font-body mk-text-body mk-text-gray-800 mk-bg-white mk-grid  mk-divide-y mk-divide-x-0 mk-divide-solid mk-divide-gray-700 mk-mr-3 mk-ml-3" x-data="slide()">
   <div class="mk-col-span-1">
     <!-- empty so line is generated-->
   </div>
   <div class="mk-col-span-1">
     <div class="mk-grid mk-grid-cols-5 mk-mb-5 mk-mt-5">
       <div class="mk-col-span-1 mk-text-gray-700 mk-font-text-lg mk-font-hdr mk-mt-3 click-event" data-action="link" data-link="article">
-        <div class="article mk-cursor-pointer">
+        <div class="article mk-cursor-pointer mk-invisible">
           <img src="images/wiki-left.svg"><span> Back to article</span>
         </div>
       </div>
@@ -42,9 +42,11 @@
     {{#each this.paragraphs}}
       <div class="mk-grid mk-grid-cols-5 mk-mb-5">
         <div class="mk-col-span-1 mk-text-gray-600 mk-font-hdr mk-text-year">
+          <!--
           {{#each this.years}}
           {{this}}<br>
           {{/each}}
+          -->
         </div>
         <div class="mk-col-span-3">
           <div class="">

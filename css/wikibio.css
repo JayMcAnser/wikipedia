@@ -89,12 +89,12 @@
   right: 0px
 }
 
-.mk-top-10 {
-  top: 2.5rem
+.mk-top-12 {
+  top: 3rem
 }
 
-.mk-bottom-10 {
-  bottom: 2.5rem
+.mk-bottom-12 {
+  bottom: 3rem
 }
 
 .mk-top-5 {
@@ -111,22 +111,6 @@
 
 .mk-bottom-5 {
   bottom: 1.25rem
-}
-
-.mk-top-20 {
-  top: 5rem
-}
-
-.mk-bottom-20 {
-  bottom: 5rem
-}
-
-.mk-top-12 {
-  top: 3rem
-}
-
-.mk-bottom-12 {
-  bottom: 3rem
 }
 
 .mk-z-20 {
@@ -162,6 +146,10 @@
   margin-right: auto
 }
 
+.mk--mt-2 {
+  margin-top: -0.5rem
+}
+
 .mk-mb-5 {
   margin-bottom: 1.25rem
 }
@@ -182,12 +170,12 @@
   margin-bottom: 0.75rem
 }
 
-.mk--mt-4 {
-  margin-top: -1rem
+.mk-mr-3 {
+  margin-right: 0.75rem
 }
 
-.mk--mt-2 {
-  margin-top: -0.5rem
+.mk-ml-3 {
+  margin-left: 0.75rem
 }
 
 .mk-block {
@@ -200,6 +188,10 @@
 
 .mk-grid {
   display: grid
+}
+
+.mk-hidden {
+  display: none
 }
 
 .mk-h-0 {

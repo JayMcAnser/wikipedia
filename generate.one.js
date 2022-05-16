@@ -46,8 +46,10 @@ const say = function(msg) {
 
 
 const defaults = {
-  name: 'Nan Hoover',
-  key: 'Q1964408',
+  // name: 'Nan Hoover',
+  // key: 'Q1964408',
+  name: 'Marina Abramovic',
+  key: 'Q47496',
   rootDirectory: __dirname,
   template: 'templates/body.shtml',
   output: 'temp/output.html',

@@ -1,5 +1,11 @@
 ## Wikipedia connector Mediakunst.net
 
+2022-05-16 V1.7.0
+- chg: new layout for the stylesheet
+- chg: stop flicker of back to article
+- add: readme.md adjusted
+- fix: margin so scrollbar does not hit the arrows
+
 2021-09-26
 - listing number per alinea
 

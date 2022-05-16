@@ -36,7 +36,7 @@
 
   <script >
     const connect = function() {
-      const isArticle = true; // show article parts
+      const isArticle = false; // show article parts
       var divs = document.querySelectorAll('.panel-event');
      // console.log('DIVS', divs)
       divs.forEach(el => el.addEventListener('click', function(event) {
@@ -57,12 +57,14 @@
             }
           }
       }));
-      if (!isArticle) {
-        let articleDivs = document.querySelectorAll('.article');
-        articleDivs.forEach((el) => {
-          el.classList.add('mk-invisible')
-        })
-      }
+      let articleDivs = document.querySelectorAll('.article');
+      articleDivs.forEach((el) => {
+        if (isArticle) {
+          el.classList.remove('mk-invisible');
+        } else {
+          el.classList.add('mk-invisible');
+        }
+      })
       // alert(`bind to ${divs.length} elements`)
     }
 

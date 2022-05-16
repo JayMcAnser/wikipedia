@@ -116,5 +116,29 @@ Resulting JSON document:
     }
   ]
 }
-
 ```
+
+## Adjusting the template
+
+The data can be retrieved by the **generate.one.js** script. This will create the **/temp/output.html** that can shown
+with **/templates/index.surface.html**. The merge is done by merging the data (**/temp/output.json**) with the template
+(**/templates/body.shtml**). 
+
+## Adjusting the stylesheet
+TailwindCSS is used as stylesheet engine. The system needs to compile the source file into a super small stylesheet.
+To auto compile the stylesheet use:
+```shell
+npm run tailwind:dev
+```
+The stylesheet is located at **/css/styles.css**. The generated style sheet is at **/css/wikibio.css**
+The definition does **NOT** remove the default styles because that would interfere with the styles used by the
+mediakunst.net siteT
+
+To regenerate the data with the template use:
+```shell
+ node generate.one.js 
+```
+and refresh the **/templates/index.surface.html**
+
+# BE CAREFULL 
+## All tailwind tags should be preceded with "mk-" to stop the name collision

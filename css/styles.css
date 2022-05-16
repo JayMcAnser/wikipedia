@@ -28,4 +28,7 @@
   .bio-body {
     @apply mk-w-3/4 mk-flex-grow
   }
+  .bio-hidden {
+    @apply hidden
+  }
 }
