@@ -23,7 +23,7 @@
     </div>
   </div>
   {{#each bio}}
-    <div class="mk-col-span-1">
+    <div class="mk-col-span-1 mk-overflow-hidden">
     {{#if this.title}}
         <div class="mk-grid mk-grid-cols-5 mk-mb-3 mk-mt-3 panel-event mk-cursor-pointer"  id="{{this.id}}">
           <div class="mk-col-span-1"></div>
