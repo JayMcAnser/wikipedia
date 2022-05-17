@@ -36,7 +36,7 @@ const qIdToJson = function(qId, name, options = {}) {
  */
 const mergeFileName =  async function(qId, name, fileName, options = {}) {
   let json = await qIdToJson(qId, name, options);
-  let mergeEngine = new MergeEngine(options);
+  let mergeEngine = new MergeEngine(undefined, options);
   mergeEngine.templateFile = fileName ? fileName : Path.join(rootDir, 'templates', 'preview.html');
   return mergeEngine.merge(json)
 }
@@ -50,7 +50,7 @@ const mergeFileName =  async function(qId, name, fileName, options = {}) {
  */
 const mergeTemplate = async function(qId, name, template, options = {}) {
   let json = await qIdToJson(qId, name, options);
-  let mergeEngine = new MergeEngine(options);
+  let mergeEngine = new MergeEngine(template, options);
   mergeEngine.template = template;
   return mergeEngine.merge(json)
 }

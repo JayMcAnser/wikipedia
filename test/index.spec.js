@@ -36,14 +36,15 @@ describe('index-connector', function () {
     assert.isTrue(json.error.length > 10)
   })
   it('merge template', async () => {
-    let text = await Connector.mergeTemplate(Q_ULAY, 'Ulay', 'name: {{artistName}}, real: {{bio.0.paragraphs.0.sentences.0.text}} ')
+    let text = await Connector.mergeTemplate(Q_ULAY, 'Ulay', 'name: {{artistName}}, real: {{bio.0.paragraphs.0.sentences.0.text}}',
+      {imagePath: Path.join(__dirname, 'data')})
     assert.isDefined(text)
     assert.include(text, 'Ulay')
     assert.include(text, 'Frank Uwe')
   });
 
   it('merge filename', async() => {
-    let text = await Connector.mergeFileName(Q_ULAY, 'Ulay', Path.join(__dirname, 'data', 'template.test.html'))
+    let text = await Connector.mergeFileName(Q_ULAY, 'Ulay', Path.join(__dirname, 'data', 'template.test.html'), {imagePath: Path.join(__dirname, 'data')})
     assert.isDefined(text)
     assert.include(text, 'Ulay')
     assert.include(text, 'Frank Uwe')

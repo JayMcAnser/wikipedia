@@ -12,6 +12,7 @@ const Q_ABRA = 'Q47496'
 
 
 const WikiConnect = require('../lib/wiki-connect')
+const Path = require("path");
 
 describe('wiki-connect', function () {
 
@@ -20,31 +21,31 @@ describe('wiki-connect', function () {
     assert.isDefined(wikiConnect)
   })
 
-  // // blocked for testing
-  // it('artist to info', async() => {
-  //   let wikiConnect = new WikiConnect.Wiki();
-  //   let result = await wikiConnect.artistByQId(Q_ULAY)
-  //   assert.isDefined(result)
-  //   assert.isDefined(result.wikiUrl);
-  //   assert.equal(result.wikiUrl, 'https://en.wikipedia.org/wiki/Ulay')
-  //   assert.equal(result.bio.length, 5);
-  //   assert.equal(result.bio[1].title, 'Early career');
-  //   assert.equal(result.bio[1].paragraphs.length, 1);
-  //   // text may differ if changed in the wikipedia
-  //   assert.equal(result.bio[1].paragraphs[0].sentences[0].text, 'In the early 1970s, struggling with his sense of "Germanness," Ulay moved to Amsterdam, where he began experimenting with the medium of Polaroid.')
-  // })
+  // blocked for testing
+  it('artist to info', async() => {
+    let wikiConnect = new WikiConnect.Wiki({imagePath: Path.join(__dirname, 'data') });
+    let result = await wikiConnect.artistByQId(Q_ULAY)
+    assert.isDefined(result)
+    assert.isDefined(result.wikiUrl);
+    assert.equal(result.wikiUrl, 'https://en.wikipedia.org/wiki/Ulay')
+    assert.equal(result.bio.length, 5);
+    assert.equal(result.bio[1].title, 'Early career');
+    assert.equal(result.bio[1].paragraphs.length, 1);
+    // text may differ if changed in the wikipedia
+    assert.equal(result.bio[1].paragraphs[0].sentences[0].text, 'In the early 1970s, struggling with his sense of "Germanness," Ulay moved to Amsterdam, where he began experimenting with the medium of Polaroid.')
+  })
 
   describe('listing years', () => {
     it('one year', () => {
       let scanner = new WikiConnect.Wiki();
-      let years = scanner.listYears(['the 1945 range'])
+      let years = scanner.listYears([{text: 'the 1945 range'}])
       assert.isTrue(Array.isArray(years));
       assert.equal(years.length, 1);
       assert.equal(years[0], '1945')
     })
     it('multiple years', () => {
       let scanner = new WikiConnect.Wiki();
-      let years = scanner.listYears(['the 1945 range 1946'])
+      let years = scanner.listYears([{text: 'the 1945 range 1946'}])
       assert.isTrue(Array.isArray(years));
       assert.equal(years.length, 2);
       assert.equal(years[0], '1945')
@@ -52,7 +53,7 @@ describe('wiki-connect', function () {
     })
     it('multiple lines', () => {
       let scanner = new WikiConnect.Wiki();
-      let years = scanner.listYears(['the 1945', 'range 1946'])
+      let years = scanner.listYears([{text: 'the 1945'}, {text: 'range 1946'}])
       assert.isTrue(Array.isArray(years));
       assert.equal(years.length, 2);
       assert.equal(years[0], '1945')
@@ -60,7 +61,7 @@ describe('wiki-connect', function () {
     });
     it('ordering', () => {
       let scanner = new WikiConnect.Wiki();
-      let years = scanner.listYears(['the 1946', 'range 1945'])
+      let years = scanner.listYears([{text: 'the 1946'},{text: 'range 1945'}])
       assert.isTrue(Array.isArray(years));
       assert.equal(years.length, 2);
       assert.equal(years[0], '1945')
@@ -69,21 +70,21 @@ describe('wiki-connect', function () {
 
     it('single range', () => {
       let scanner = new WikiConnect.Wiki();
-      let years = scanner.listYears(['the 1940-1945 range'])
+      let years = scanner.listYears([{text: 'the 1940-1945 range'}])
       assert.isTrue(Array.isArray(years));
       assert.equal(years.length, 1);
       assert.equal(years[0], '1940 - 1945')
     })
     it('multi range', () => {
       let scanner = new WikiConnect.Wiki();
-      let years = scanner.listYears(['the 1940-1945 range, 1982-1985'])
+      let years = scanner.listYears([{text: 'the 1940-1945 range, 1982-1985'}])
       assert.isTrue(Array.isArray(years));
       assert.equal(years.length, 2);
       assert.equal(years[0], '1940 - 1945')
     })
     it ('weird ranges', () => {
       let scanner = new WikiConnect.Wiki();
-      let years = scanner.listYears(['the 1945-1940 range, 1982-1985'])
+      let years = scanner.listYears([{text: 'the 1945-1940 range, 1982-1985'}])
       assert.isTrue(Array.isArray(years));
       assert.equal(years.length, 2);
       assert.equal(years[0], '1940 - 1945')
@@ -91,7 +92,7 @@ describe('wiki-connect', function () {
 
     it('range and years', () => {
       let scanner = new WikiConnect.Wiki();
-      let years = scanner.listYears(['the 1940-1945 range, 1943'])
+      let years = scanner.listYears([{ text: 'the 1940-1945 range, 1943'}])
       assert.isTrue(Array.isArray(years));
       assert.equal(years.length, 1);
       assert.equal(years[0], '1940 - 1945')
