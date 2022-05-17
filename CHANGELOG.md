@@ -7,6 +7,7 @@
 - fix: margin so scrollbar does not hit the arrows
 - fix: test result in errors (test were wrong)
 - fix: test result in bitmap in /lib directory
+- fix: update wtf scanner
 
 2021-09-26
 - listing number per alinea

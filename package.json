@@ -18,20 +18,20 @@
   "author": "Jay McAnser",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^10.3.5",
-    "axios": "^0.21.1",
+    "autoprefixer": "^10.4.7",
+    "axios": "^0.27.2",
     "circular-json": "^0.5.9",
-    "command-line-args": "^5.2.0",
-    "config": "^3.3.6",
+    "command-line-args": "^5.2.1",
+    "config": "^3.3.7",
     "handlebars": "^4.7.7",
     "jshashes": "^1.0.8",
-    "postcss-cli": "^9.0.0",
-    "wtf_wikipedia": "^8.5.1"
+    "postcss-cli": "^9.1.0",
+    "wtf_wikipedia": "^10.0.0"
   },
   "devDependencies": {
-    "chai": "^4.3.4",
+    "chai": "^4.3.6",
     "chai-http": "^4.3.0",
-    "mocha": "^9.0.3",
+    "mocha": "^10.0.0",
     "npm-watch": "^0.11.0"
   }
 }
