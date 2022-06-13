@@ -79,10 +79,11 @@
   <div class="mk-col-span-1">
     <div class="mk-grid mk-grid-cols-5 mk-mt-5">
       <div class="mk-col-span-1"></div>
-      <div class="mk-text-lg mk-font-bold mk-font-hdr mk-col-span-3 mk-text-gray-900 link-event mk-cursor-pointer" data-url="{{mediakunstUrl}}">
+      <div class="mk-text-lg mk-font-bold mk-font-hdr mk-col-span-3 mk-text-gray-900">
+        <div class="link-event mk-cursor-pointer" data-url="{{mediakunstUrl}}">
           <div class="mk-inline">View artworks by {{artistName}}</div>
           <div class="mk-inline"><img src="images/wiki-right.svg"></div>
-        </a>
+        </div>
         <br/>
         <br/><br/><br/><br/>
         <a class="mk-no-underline mk-text-gray-900" href="{{wikiUrl}}" target="_blank">

@@ -1,7 +1,7 @@
 # wikipedia
 Connector between Wikipedia and Mediakunst.net
 
-version 1.0
+version 1.x
 
 The connector does an import of the wikepedia article based upon the Q-id of the artist. The is looked up in 
 the WikiData. It than uses the result page to find an english article, which is assumed to be the biography 
@@ -122,7 +122,7 @@ Resulting JSON document:
 
 The data can be retrieved by the **generate.one.js** script. This will create the **/temp/output.html** that can shown
 with **/templates/index.surface.html**. The merge is done by merging the data (**/temp/output.json**) with the template
-(**/templates/body.shtml**). 
+(**/templates/body.shtml**). The template should be place within the client workspace (mediakunst)
 
 ## Adjusting the stylesheet
 TailwindCSS is used as stylesheet engine. The system needs to compile the source file into a super small stylesheet.
@@ -138,7 +138,7 @@ To regenerate the data with the template use:
 ```shell
  node generate.one.js 
 ```
-and refresh the **/templates/index.surface.html**
+and refresh the **/templates/index.surface.html**. The adjust file is **/temp/output.html** and **/temp/output.json**
 
 # BE CAREFULL 
 ## All tailwind tags should be preceded with "mk-" to stop the name collision

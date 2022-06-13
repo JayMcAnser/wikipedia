@@ -1,5 +1,9 @@
 ## Wikipedia connector Mediakunst.net
 
+2022-06-13 V1.8.0
+- fix: getting ready for production
+- fix: the link for artworks and source wikipedia overlap
+
 2022-05-16 V1.7.0
 - chg: new layout for the stylesheet
 - chg: stop flicker of back to article (should update index.surface.html also in calling project)
