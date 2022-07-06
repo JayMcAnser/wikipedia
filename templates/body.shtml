@@ -1,5 +1,6 @@
 <!-- classes to include: hidden -->
 <div class="mk-font-body mk-text-body mk-text-gray-800 mk-bg-white mk-grid  mk-divide-y mk-divide-x-0 mk-divide-solid mk-divide-gray-700 mk-mr-3 mk-ml-3" x-data="slide()">
+  <!-- template version: {{ version }} -->
   <div class="mk-col-span-1">
     <!-- empty so line is generated-->
   </div>

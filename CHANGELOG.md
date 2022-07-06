@@ -1,5 +1,8 @@
 ## Wikipedia connector Mediakunst.net
 
+2022-06-014 V1.8.1
+- add: add version number to generated files
+
 2022-06-13 V1.8.0
 - fix: getting ready for production
 - fix: the link for artworks and source wikipedia overlap

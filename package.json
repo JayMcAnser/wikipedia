@@ -3,7 +3,7 @@
     "generate": "templates/body.shtml"
   },
   "name": "wikipedia",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "Wikipedia mediakunst connector",
   "main": "index.js",
   "scripts": {
